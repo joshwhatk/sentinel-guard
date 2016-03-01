@@ -3,6 +3,7 @@
 namespace Joshwhatk\Cent;
 
 use Illuminate\Contracts\Auth\Guard;
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 
 class Cent implements Guard
 {
