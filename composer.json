@@ -1,0 +1,24 @@
+{
+    "name": "joshwhatk/sentinel-auth",
+    "description": "Laravel Auth Provider for Cartalyst's Sentinel",
+    "require": {
+      "php": ">=5.5.9",
+      "laravel/framework": "5.2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Joshwhatk\\Cent\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joshua Friend",
+            "email": "joshwhatk@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
