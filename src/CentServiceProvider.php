@@ -6,7 +6,7 @@ namespace Joshwhatk\Cent;
  * Part of the Cent package.
  *
  * @package    Cent
- * @version    0.0.4
+ * @version    1.0.0
  * @author     joshwhatk
  * @license    MIT
  * @link       http://jwk.me
@@ -32,7 +32,7 @@ class CentServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Auth::extend('cent', function() {
+        Auth::extend('cent', function () {
             return new Cent();
         });
     }

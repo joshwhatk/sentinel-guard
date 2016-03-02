@@ -1,6 +1,6 @@
 {
-    "name": "joshwhatk/sentinel-auth",
-    "description": "Laravel Auth Provider for Cartalyst's Sentinel",
+    "name": "joshwhatk/sentinel-guard",
+    "description": "Laravel Guard for Cartalyst's Sentinel",
     "require": {
       "php": ">=5.5.9",
       "laravel/framework": "5.2.*",
