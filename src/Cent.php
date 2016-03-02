@@ -14,7 +14,12 @@ class Cent implements Guard
    */
   public function check()
   {
-    //
+    if(Sentinel::check())
+    {
+      return true;
+    }
+
+    return false;
   }
 
   /**
@@ -24,7 +29,7 @@ class Cent implements Guard
    */
   public function guest()
   {
-    //
+    return Sentinel::guest();
   }
 
   /**
@@ -34,7 +39,7 @@ class Cent implements Guard
    */
   public function user()
   {
-    //
+    return Sentinel::getUser();
   }
 
   /**
@@ -44,7 +49,12 @@ class Cent implements Guard
    */
   public function id()
   {
-    //
+    if($user = Sentinel::check())
+    {
+      return $user->id;
+    }
+
+    return null;
   }
 
   /**
@@ -55,7 +65,7 @@ class Cent implements Guard
    */
   public function validate(array $credentials = [])
   {
-    //
+    return Sentinel::validForCreation($credentials);
   }
 
   /**
@@ -66,7 +76,7 @@ class Cent implements Guard
    */
   public function setUser(Authenticatable $user)
   {
-    //
+    Sentinel::login($user);
   }
 
 }
