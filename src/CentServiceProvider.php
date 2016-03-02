@@ -12,6 +12,8 @@ namespace Joshwhatk\Cent;
  * @link       http://jwk.me
  */
 
+use Illuminate\Support\Facades\Auth;
+use Joshwhatk\Cent\Cent;
 use Illuminate\Support\ServiceProvider;
 
 class CentServiceProvider extends ServiceProvider
@@ -30,12 +32,9 @@ class CentServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->publishes([
-        //     __DIR__.'/../config/joshwhatk.super_scan.php' => config_path('joshwhatk.super_scan.php'),
-        //     __DIR__.'/../database/migrations/' => database_path('migrations')
-        // ]);
-
-        // $this->loadViewsFrom(__DIR__.'/../views', 'super-scan');
+        Auth::extend('cent', function() {
+            return new Cent();
+        });
     }
 
     /**
