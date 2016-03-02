@@ -1,4 +1,4 @@
-#Cent (An Auth Implementation for Sentinel *stateless*)
+#Cent (An Auth Gaurd Implementation for *stateless* Sentinel)
 
 ## Installation
 
@@ -11,11 +11,13 @@
     {
         ...
     ```
+
 - Register the CentServiceProvider in your `config/app.php`
 
     ```
     Joshwhatk\Cent\CentServiceProvider::class,
     ```
+
 - Change the api driver to `cent` in your `config/auth.php`
 
     ```
