@@ -2,25 +2,34 @@
 
 namespace Joshwhatk\Cent;
 
+/**
+ * Part of the Cent package.
+ *
+ * @package    Cent
+ * @version    1.0.0
+ * @author     joshwhatk
+ * @license    MIT
+ * @link       http://jwk.me
+ */
+
 use Illuminate\Contracts\Auth\Guard;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Contracts\Auth\Authenticatable;
 
 class Cent implements Guard
 {
-  /**
+    /**
    * Determine if the current user is authenticated.
    *
    * @return bool
    */
   public function check()
   {
-    if(Sentinel::check())
-    {
-      return true;
-    }
+      if (Sentinel::check()) {
+          return true;
+      }
 
-    return false;
+      return false;
   }
 
   /**
@@ -30,7 +39,7 @@ class Cent implements Guard
    */
   public function guest()
   {
-    return Sentinel::guest();
+      return Sentinel::guest();
   }
 
   /**
@@ -40,7 +49,7 @@ class Cent implements Guard
    */
   public function user()
   {
-    return Sentinel::getUser();
+      return Sentinel::getUser();
   }
 
   /**
@@ -50,12 +59,11 @@ class Cent implements Guard
    */
   public function id()
   {
-    if($user = Sentinel::check())
-    {
-      return $user->id;
-    }
+      if ($user = Sentinel::check()) {
+          return $user->id;
+      }
 
-    return null;
+      return null;
   }
 
   /**
@@ -66,7 +74,7 @@ class Cent implements Guard
    */
   public function validate(array $credentials = [])
   {
-    return Sentinel::validForCreation($credentials);
+      return Sentinel::validForCreation($credentials);
   }
 
   /**
@@ -77,7 +85,6 @@ class Cent implements Guard
    */
   public function setUser(Authenticatable $user)
   {
-    Sentinel::login($user);
+      Sentinel::login($user);
   }
-
 }
