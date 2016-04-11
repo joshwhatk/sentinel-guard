@@ -1,4 +1,4 @@
-#Cent (An Auth Gaurd Implementation for *stateless* Sentinel) v1.0.0
+#Cent (An Auth Gaurd Implementation for *stateless* Sentinel) v1.0.1
 
 ## Installation
 

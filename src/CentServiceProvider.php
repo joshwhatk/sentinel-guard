@@ -6,7 +6,7 @@ namespace Joshwhatk\Cent;
  * Part of the Cent package.
  *
  * @package    Cent
- * @version    1.0.0
+ * @version    1.0.1
  * @author     joshwhatk
  * @license    MIT
  * @link       http://jwk.me
