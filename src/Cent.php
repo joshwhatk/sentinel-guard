@@ -6,7 +6,7 @@ namespace Joshwhatk\Cent;
  * Part of the Cent package.
  *
  * @package    Cent
- * @version    1.0.0
+ * @version    1.0.1
  * @author     joshwhatk
  * @license    MIT
  * @link       http://jwk.me
@@ -86,5 +86,16 @@ class Cent implements Guard
   public function setUser(Authenticatable $user)
   {
       Sentinel::login($user);
+  }
+
+  /**
+   * Alias to set the current user.
+   *
+   * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+   * @return void
+   */
+  public function login(Authenticatable $user)
+  {
+      $this->setUser($user);
   }
 }
