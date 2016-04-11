@@ -87,4 +87,15 @@ class Cent implements Guard
   {
       Sentinel::login($user);
   }
+
+  /**
+   * Alias to set the current user.
+   *
+   * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+   * @return void
+   */
+  public function login(Authenticatable $user)
+  {
+      $this->setUser($user);
+  }
 }
